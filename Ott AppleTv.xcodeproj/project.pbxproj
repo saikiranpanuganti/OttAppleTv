@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5576674376BAE4CFD87E3432 /* Pods_Ott_AppleTv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBF95F6097553D170CFFED6 /* Pods_Ott_AppleTv.framework */; };
 		7F026D7B2806017F00D549E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F026D7A2806017F00D549E8 /* AppDelegate.swift */; };
 		7F026D802806017F00D549E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F026D7E2806017F00D549E8 /* Main.storyboard */; };
 		7F026D832806017F00D549E8 /* Ott_AppleTv.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F026D812806017F00D549E8 /* Ott_AppleTv.xcdatamodeld */; };
@@ -16,8 +17,9 @@
 		7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05018A283933E100A4A2C8 /* Controllers.swift */; };
 		7F05018D2839354B00A4A2C8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05018C2839354B00A4A2C8 /* MenuView.swift */; };
 		7F05018F2839356000A4A2C8 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F05018E2839356000A4A2C8 /* MenuView.xib */; };
-		7F050194283939B300A4A2C8 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */; };
-		7F050195283939B300A4A2C8 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */; };
+		7F05019F28397D3F00A4A2C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05019E28397D3F00A4A2C8 /* Constants.swift */; };
+		7F0501A228397FC800A4A2C8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */; };
+		7F0501A328397FC800A4A2C8 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */; };
 		7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2CF2838CA79006290F2 /* Urlhandler.swift */; };
 		7F75A2D42838D808006290F2 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D32838D808006290F2 /* AppData.swift */; };
 		7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D52838D865006290F2 /* MenuModel.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		335D56765D18B1E0DF288DC2 /* Pods-Ott AppleTv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ott AppleTv.release.xcconfig"; path = "Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv.release.xcconfig"; sourceTree = "<group>"; };
+		4EBF95F6097553D170CFFED6 /* Pods_Ott_AppleTv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ott_AppleTv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F026D772806017F00D549E8 /* Ott AppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ott AppleTv.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F026D7A2806017F00D549E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F026D7F2806017F00D549E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,8 +46,9 @@
 		7F05018A283933E100A4A2C8 /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
 		7F05018C2839354B00A4A2C8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7F05018E2839356000A4A2C8 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
-		7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
-		7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F05019E28397D3F00A4A2C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		7F75A2CF2838CA79006290F2 /* Urlhandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urlhandler.swift; sourceTree = "<group>"; };
 		7F75A2D32838D808006290F2 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		7F75A2D52838D865006290F2 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		7F95A76B2836BC3800A6036D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DC3419D27F144DBDBD43A6E4 /* Pods-Ott AppleTv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ott AppleTv.debug.xcconfig"; path = "Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,17 +68,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5576674376BAE4CFD87E3432 /* Pods_Ott_AppleTv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		276AC65E3E8D39CFD020474B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC3419D27F144DBDBD43A6E4 /* Pods-Ott AppleTv.debug.xcconfig */,
+				335D56765D18B1E0DF288DC2 /* Pods-Ott AppleTv.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		47E80F8EEEDF7A01414E52A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EBF95F6097553D170CFFED6 /* Pods_Ott_AppleTv.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7F026D6E2806017F00D549E8 = {
 			isa = PBXGroup;
 			children = (
 				7F026D792806017F00D549E8 /* Ott AppleTv */,
 				7F026D782806017F00D549E8 /* Products */,
+				276AC65E3E8D39CFD020474B /* Pods */,
+				47E80F8EEEDF7A01414E52A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7F026D7A2806017F00D549E8 /* AppDelegate.swift */,
+				7F05019E28397D3F00A4A2C8 /* Constants.swift */,
 				7F75A2CF2838CA79006290F2 /* Urlhandler.swift */,
 				7F75A2D32838D808006290F2 /* AppData.swift */,
 				7F75A2D52838D865006290F2 /* MenuModel.swift */,
@@ -120,8 +147,8 @@
 		7F0501912839399E00A4A2C8 /* MenuCell */ = {
 			isa = PBXGroup;
 			children = (
-				7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */,
-				7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */,
+				7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */,
+				7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */,
 			);
 			path = MenuCell;
 			sourceTree = "<group>";
@@ -168,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F026D8B2806018000D549E8 /* Build configuration list for PBXNativeTarget "Ott AppleTv" */;
 			buildPhases = (
+				D2537F0CC8D25224C18DEFBA /* [CP] Check Pods Manifest.lock */,
 				7F026D732806017F00D549E8 /* Sources */,
 				7F026D742806017F00D549E8 /* Frameworks */,
 				7F026D752806017F00D549E8 /* Resources */,
+				FF0DBACE4B185C5325E572AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,16 +248,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F050195283939B300A4A2C8 /* MenuCollectionViewCell.xib in Resources */,
 				7F026D882806018000D549E8 /* LaunchScreen.storyboard in Resources */,
 				7F05018F2839356000A4A2C8 /* MenuView.xib in Resources */,
 				7F026D852806018000D549E8 /* Assets.xcassets in Resources */,
 				7F026D802806017F00D549E8 /* Main.storyboard in Resources */,
+				7F0501A328397FC800A4A2C8 /* MenuTableViewCell.xib in Resources */,
 				7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D2537F0CC8D25224C18DEFBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ott AppleTv-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF0DBACE4B185C5325E572AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F026D732806017F00D549E8 /* Sources */ = {
@@ -236,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F7C6EED280832D400FD29EC /* NetworkAdaptor.swift in Sources */,
+				7F05019F28397D3F00A4A2C8 /* Constants.swift in Sources */,
 				7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */,
 				7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */,
 				7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */,
@@ -243,9 +315,9 @@
 				7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */,
 				7F026D832806017F00D549E8 /* Ott_AppleTv.xcdatamodeld in Sources */,
 				7F026D7B2806017F00D549E8 /* AppDelegate.swift in Sources */,
-				7F050194283939B300A4A2C8 /* MenuCollectionViewCell.swift in Sources */,
 				7F05018D2839354B00A4A2C8 /* MenuView.swift in Sources */,
 				7F7C6EF1280837CB00FD29EC /* SplashViewController.swift in Sources */,
+				7F0501A228397FC800A4A2C8 /* MenuTableViewCell.swift in Sources */,
 				7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */,
 				7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */,
 				7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */,
@@ -392,6 +464,7 @@
 		};
 		7F026D8C2806018000D549E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC3419D27F144DBDBD43A6E4 /* Pods-Ott AppleTv.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -417,6 +490,7 @@
 		};
 		7F026D8D2806018000D549E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335D56765D18B1E0DF288DC2 /* Pods-Ott AppleTv.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

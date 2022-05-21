@@ -8,12 +8,18 @@
 import UIKit
 
 class MenuView: UIView {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [tableView]
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         print("MenuView init frame")
+        xibSetUp()
         setUpUI()
     }
     
@@ -21,41 +27,59 @@ class MenuView: UIView {
         super.init(coder: coder)
         
         print("MenuView init coder")
+        xibSetUp()
         setUpUI()
     }
     
+    private func xibSetUp() {
+        if let view = loadXibFromNib() {
+            contentView = view
+            contentView.frame = bounds
+            contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            contentView.translatesAutoresizingMaskIntoConstraints = true
+            addSubview(view)
+        }
+    }
+    
+    private func loadXibFromNib() -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "MenuView", bundle: bundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView
+        return view
+    }
+    
     func setUpUI() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        contentView.backgroundColor = UIColor(named: "backGroundColor")
+        tableView.backgroundColor = UIColor(named: "backGroundColor")
+        tableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuTableViewCell")
+        tableView.remembersLastFocusedIndexPath = true
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
     
 }
 
-extension MenuView: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+extension MenuView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return AppData.shared.menuData?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell {
+            cell.configureUI(menu: AppData.shared.menuData?[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
     }
 }
 
-extension MenuView: UICollectionViewDelegate {
-    
-}
-
-extension MenuView: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.zero
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+extension MenuView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 }
