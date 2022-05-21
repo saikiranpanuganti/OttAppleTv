@@ -8,21 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		7F026D7B2806017F00D549E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F026D7A2806017F00D549E8 /* AppDelegate.swift */; };
-		7F026D7D2806017F00D549E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F026D7C2806017F00D549E8 /* ViewController.swift */; };
 		7F026D802806017F00D549E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F026D7E2806017F00D549E8 /* Main.storyboard */; };
 		7F026D832806017F00D549E8 /* Ott_AppleTv.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F026D812806017F00D549E8 /* Ott_AppleTv.xcdatamodeld */; };
 		7F026D852806018000D549E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F026D842806018000D549E8 /* Assets.xcassets */; };
 		7F026D882806018000D549E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F026D862806018000D549E8 /* LaunchScreen.storyboard */; };
+		7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0501882839286B00A4A2C8 /* HomeModel.swift */; };
+		7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05018A283933E100A4A2C8 /* Controllers.swift */; };
+		7F05018D2839354B00A4A2C8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05018C2839354B00A4A2C8 /* MenuView.swift */; };
+		7F05018F2839356000A4A2C8 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F05018E2839356000A4A2C8 /* MenuView.xib */; };
+		7F050194283939B300A4A2C8 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */; };
+		7F050195283939B300A4A2C8 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */; };
+		7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2CF2838CA79006290F2 /* Urlhandler.swift */; };
+		7F75A2D42838D808006290F2 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D32838D808006290F2 /* AppData.swift */; };
+		7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D52838D865006290F2 /* MenuModel.swift */; };
+		7F7C6EED280832D400FD29EC /* NetworkAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EEC280832D400FD29EC /* NetworkAdaptor.swift */; };
+		7F7C6EF1280837CB00FD29EC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */; };
+		7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */; };
+		7F7C6EF5280837EA00FD29EC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF4280837EA00FD29EC /* SplashView.swift */; };
+		7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF72808384E00FD29EC /* BaseViewModel.swift */; };
+		7F95A76C2836BC3800A6036D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F95A76B2836BC3800A6036D /* RootViewController.swift */; };
+		7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */; };
+		7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F026D772806017F00D549E8 /* Ott AppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ott AppleTv.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F026D7A2806017F00D549E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F026D7C2806017F00D549E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F026D7F2806017F00D549E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F026D822806017F00D549E8 /* Ott_AppleTv.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ott_AppleTv.xcdatamodel; sourceTree = "<group>"; };
 		7F026D842806018000D549E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F026D872806018000D549E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F0501882839286B00A4A2C8 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		7F05018A283933E100A4A2C8 /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
+		7F05018C2839354B00A4A2C8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7F05018E2839356000A4A2C8 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F75A2CF2838CA79006290F2 /* Urlhandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urlhandler.swift; sourceTree = "<group>"; };
+		7F75A2D32838D808006290F2 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		7F75A2D52838D865006290F2 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		7F7C6EEC280832D400FD29EC /* NetworkAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdaptor.swift; sourceTree = "<group>"; };
+		7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		7F7C6EF4280837EA00FD29EC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7F7C6EF72808384E00FD29EC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		7F95A76B2836BC3800A6036D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +88,77 @@
 			isa = PBXGroup;
 			children = (
 				7F026D7A2806017F00D549E8 /* AppDelegate.swift */,
-				7F026D7C2806017F00D549E8 /* ViewController.swift */,
+				7F75A2CF2838CA79006290F2 /* Urlhandler.swift */,
+				7F75A2D32838D808006290F2 /* AppData.swift */,
+				7F75A2D52838D865006290F2 /* MenuModel.swift */,
+				7F0501882839286B00A4A2C8 /* HomeModel.swift */,
+				7F05018A283933E100A4A2C8 /* Controllers.swift */,
+				7F7C6EEE2808378200FD29EC /* NetworkAdaptor */,
+				7F95A76B2836BC3800A6036D /* RootViewController.swift */,
+				7F0501912839399E00A4A2C8 /* MenuCell */,
+				7F0501902839367D00A4A2C8 /* MenuView */,
+				7F7C6EF62808384100FD29EC /* Base */,
+				7F7C6EEF280837BD00FD29EC /* Splash */,
+				7FA7ABC72806BB4C009DC344 /* Home */,
 				7F026D7E2806017F00D549E8 /* Main.storyboard */,
 				7F026D842806018000D549E8 /* Assets.xcassets */,
 				7F026D862806018000D549E8 /* LaunchScreen.storyboard */,
 				7F026D812806017F00D549E8 /* Ott_AppleTv.xcdatamodeld */,
 			);
 			path = "Ott AppleTv";
+			sourceTree = "<group>";
+		};
+		7F0501902839367D00A4A2C8 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				7F05018C2839354B00A4A2C8 /* MenuView.swift */,
+				7F05018E2839356000A4A2C8 /* MenuView.xib */,
+			);
+			path = MenuView;
+			sourceTree = "<group>";
+		};
+		7F0501912839399E00A4A2C8 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F050192283939B300A4A2C8 /* MenuCollectionViewCell.swift */,
+				7F050193283939B300A4A2C8 /* MenuCollectionViewCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		7F7C6EEE2808378200FD29EC /* NetworkAdaptor */ = {
+			isa = PBXGroup;
+			children = (
+				7F7C6EEC280832D400FD29EC /* NetworkAdaptor.swift */,
+			);
+			path = NetworkAdaptor;
+			sourceTree = "<group>";
+		};
+		7F7C6EEF280837BD00FD29EC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */,
+				7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */,
+				7F7C6EF4280837EA00FD29EC /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		7F7C6EF62808384100FD29EC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7F7C6EF72808384E00FD29EC /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7FA7ABC72806BB4C009DC344 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */,
+				7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +219,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F050195283939B300A4A2C8 /* MenuCollectionViewCell.xib in Resources */,
 				7F026D882806018000D549E8 /* LaunchScreen.storyboard in Resources */,
+				7F05018F2839356000A4A2C8 /* MenuView.xib in Resources */,
 				7F026D852806018000D549E8 /* Assets.xcassets in Resources */,
 				7F026D802806017F00D549E8 /* Main.storyboard in Resources */,
+				7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +235,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F026D7D2806017F00D549E8 /* ViewController.swift in Sources */,
+				7F7C6EED280832D400FD29EC /* NetworkAdaptor.swift in Sources */,
+				7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */,
+				7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */,
+				7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */,
+				7F95A76C2836BC3800A6036D /* RootViewController.swift in Sources */,
+				7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */,
 				7F026D832806017F00D549E8 /* Ott_AppleTv.xcdatamodeld in Sources */,
 				7F026D7B2806017F00D549E8 /* AppDelegate.swift in Sources */,
+				7F050194283939B300A4A2C8 /* MenuCollectionViewCell.swift in Sources */,
+				7F05018D2839354B00A4A2C8 /* MenuView.swift in Sources */,
+				7F7C6EF1280837CB00FD29EC /* SplashViewController.swift in Sources */,
+				7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */,
+				7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */,
+				7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */,
+				7F7C6EF5280837EA00FD29EC /* SplashView.swift in Sources */,
+				7F75A2D42838D808006290F2 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,28 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fjl-LF-yjb">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Root View Controller-->
+        <scene sceneID="3Ak-Ao-1ag">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WIf-QU-Ax4" customClass="RootViewController" customModule="Ott_AppleTv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ViP-f9-gNu"/>
+                        <viewControllerLayoutGuide type="bottom" id="46n-gX-YrV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="k9C-uC-lu8">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-h3-Sb6">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="JjN-vs-2lN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXo-9K-nzy">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8mX-T7-765"/>
+                        <color key="backgroundColor" red="0.0" green="0.7843137255" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aXo-9K-nzy" secondAttribute="trailing" id="Qel-wn-KW2"/>
+                            <constraint firstItem="aXo-9K-nzy" firstAttribute="top" secondItem="k9C-uC-lu8" secondAttribute="top" id="SLw-vp-g8g"/>
+                            <constraint firstItem="bsv-h3-Sb6" firstAttribute="top" secondItem="k9C-uC-lu8" secondAttribute="top" id="YS4-dH-kgJ"/>
+                            <constraint firstItem="bsv-h3-Sb6" firstAttribute="leading" secondItem="k9C-uC-lu8" secondAttribute="leading" id="dOI-OW-kpu"/>
+                            <constraint firstAttribute="bottom" secondItem="aXo-9K-nzy" secondAttribute="bottom" id="e8h-gS-48v"/>
+                            <constraint firstAttribute="bottom" secondItem="bsv-h3-Sb6" secondAttribute="bottom" id="x1A-o8-Ndw"/>
+                            <constraint firstItem="aXo-9K-nzy" firstAttribute="leading" secondItem="bsv-h3-Sb6" secondAttribute="trailing" id="z8i-by-aKY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SI2-bl-hFP"/>
+                    <connections>
+                        <outlet property="homeView" destination="aXo-9K-nzy" id="qNV-sE-GXs"/>
+                        <outlet property="menuView" destination="bsv-h3-Sb6" id="hub-e8-F1Z"/>
+                        <outlet property="menuViewWidth" destination="JjN-vs-2lN" id="Uh1-As-Vqh"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KfN-p5-fng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="11193" y="22"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="yTy-S4-pE3">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dES-29-dv3" customClass="SplashViewController" customModule="Ott_AppleTv" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oki-Qe-wp2"/>
+                        <viewControllerLayoutGuide type="bottom" id="x5e-hL-fwk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Azg-Wp-xgs">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aiT-hi-hII"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ueh-qj-1go"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyZ-z5-YOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8935" y="22"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nYk-6L-Rob">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fjl-LF-yjb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcl-PC-I4k">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dES-29-dv3" kind="relationship" relationship="rootViewController" id="HEK-Xg-Mxe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7j-jw-sEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6630" y="22"/>
         </scene>
     </scenes>
 </document>
