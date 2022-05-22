@@ -9,30 +9,30 @@ import Foundation
 
 // MARK: - HomeModel
 struct HomeModel: Codable {
-    let statusCode: Int
-    let body: HomeBody
+    let statusCode: Int?
+    let body: HomeBody?
 }
 
 // MARK: - HomeBody
 struct HomeBody: Codable {
-    let data: Home
+    let data: Home?
 }
 
 // MARK: - Home
 struct Home: Codable {
-    let id: Int
-    let title, type: String
-    let banner: [Banner]
-    let playlists: [Playlist]
+    let id: Int?
+    let title, type: String?
+    let banner: [Banner]?
+    let playlists: [Playlist]?
 }
 
 // MARK: - Banner
 struct Banner: Codable {
-    let id: Int
+    let id: Int?
     let originalLanguage: OriginalLanguage?
     let originalTitle: String?
-    let contentType: ContentType
-    let imagery: Imagery
+    let contentType: ContentType?
+    let imagery: Imagery?
     let name: String?
 
     enum CodingKeys: String, CodingKey {
@@ -51,7 +51,7 @@ enum ContentType: String, Codable {
 
 // MARK: - Imagery
 struct Imagery: Codable {
-    let banner, thumbnailV, thumbnailS: String
+    let banner, thumbnailV, thumbnailS: String?
 
     enum CodingKeys: String, CodingKey {
         case banner
@@ -66,7 +66,7 @@ enum OriginalLanguage: String, Codable {
 
 // MARK: - Playlist
 struct Playlist: Codable {
-    let id: Int
-    let title: String
-    let content: [Banner]
+    let id: Int?
+    let title: String?
+    let content: [Banner]?
 }

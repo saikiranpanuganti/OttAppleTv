@@ -42,7 +42,7 @@ class SplashViewModel {
             if let data = data {
                 do {
                     let home = try JSONDecoder().decode(HomeModel.self, from: data)
-                    AppData.shared.homeData = home.body.data
+                    AppData.shared.homeData = home.body?.data
                     print(AppData.shared.homeData?.title)
                     self.delegate?.goToHome()
                 }catch {

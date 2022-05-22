@@ -20,6 +20,10 @@
 		7F05019F28397D3F00A4A2C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05019E28397D3F00A4A2C8 /* Constants.swift */; };
 		7F0501A228397FC800A4A2C8 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */; };
 		7F0501A328397FC800A4A2C8 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */; };
+		7F296ECD283A080E001833FD /* CarousalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F296ECB283A080E001833FD /* CarousalCollectionViewCell.swift */; };
+		7F296ECE283A080E001833FD /* CarousalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F296ECC283A080E001833FD /* CarousalCollectionViewCell.xib */; };
+		7F296ED1283A1D5A001833FD /* VODCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F296ECF283A1D5A001833FD /* VODCollectionViewCell.swift */; };
+		7F296ED2283A1D5A001833FD /* VODCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F296ED0283A1D5A001833FD /* VODCollectionViewCell.xib */; };
 		7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2CF2838CA79006290F2 /* Urlhandler.swift */; };
 		7F75A2D42838D808006290F2 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D32838D808006290F2 /* AppData.swift */; };
 		7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F75A2D52838D865006290F2 /* MenuModel.swift */; };
@@ -49,6 +53,10 @@
 		7F05019E28397D3F00A4A2C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		7F296ECB283A080E001833FD /* CarousalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F296ECC283A080E001833FD /* CarousalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarousalCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F296ECF283A1D5A001833FD /* VODCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F296ED0283A1D5A001833FD /* VODCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VODCollectionViewCell.xib; sourceTree = "<group>"; };
 		7F75A2CF2838CA79006290F2 /* Urlhandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urlhandler.swift; sourceTree = "<group>"; };
 		7F75A2D32838D808006290F2 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		7F75A2D52838D865006290F2 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 				7F05018A283933E100A4A2C8 /* Controllers.swift */,
 				7F7C6EEE2808378200FD29EC /* NetworkAdaptor */,
 				7F95A76B2836BC3800A6036D /* RootViewController.swift */,
+				7F296ED3283A1D5D001833FD /* VOD */,
+				7F296ECA283A07F2001833FD /* CarousalCell */,
 				7F0501912839399E00A4A2C8 /* MenuCell */,
 				7F0501902839367D00A4A2C8 /* MenuView */,
 				7F7C6EF62808384100FD29EC /* Base */,
@@ -151,6 +161,24 @@
 				7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */,
 			);
 			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		7F296ECA283A07F2001833FD /* CarousalCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F296ECB283A080E001833FD /* CarousalCollectionViewCell.swift */,
+				7F296ECC283A080E001833FD /* CarousalCollectionViewCell.xib */,
+			);
+			path = CarousalCell;
+			sourceTree = "<group>";
+		};
+		7F296ED3283A1D5D001833FD /* VOD */ = {
+			isa = PBXGroup;
+			children = (
+				7F296ECF283A1D5A001833FD /* VODCollectionViewCell.swift */,
+				7F296ED0283A1D5A001833FD /* VODCollectionViewCell.xib */,
+			);
+			path = VOD;
 			sourceTree = "<group>";
 		};
 		7F7C6EEE2808378200FD29EC /* NetworkAdaptor */ = {
@@ -250,9 +278,11 @@
 			files = (
 				7F026D882806018000D549E8 /* LaunchScreen.storyboard in Resources */,
 				7F05018F2839356000A4A2C8 /* MenuView.xib in Resources */,
+				7F296ED2283A1D5A001833FD /* VODCollectionViewCell.xib in Resources */,
 				7F026D852806018000D549E8 /* Assets.xcassets in Resources */,
 				7F026D802806017F00D549E8 /* Main.storyboard in Resources */,
 				7F0501A328397FC800A4A2C8 /* MenuTableViewCell.xib in Resources */,
+				7F296ECE283A080E001833FD /* CarousalCollectionViewCell.xib in Resources */,
 				7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +340,7 @@
 				7F05019F28397D3F00A4A2C8 /* Constants.swift in Sources */,
 				7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */,
 				7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */,
+				7F296ECD283A080E001833FD /* CarousalCollectionViewCell.swift in Sources */,
 				7F75A2D62838D865006290F2 /* MenuModel.swift in Sources */,
 				7F95A76C2836BC3800A6036D /* RootViewController.swift in Sources */,
 				7F75A2D02838CA79006290F2 /* Urlhandler.swift in Sources */,
@@ -317,6 +348,7 @@
 				7F026D7B2806017F00D549E8 /* AppDelegate.swift in Sources */,
 				7F05018D2839354B00A4A2C8 /* MenuView.swift in Sources */,
 				7F7C6EF1280837CB00FD29EC /* SplashViewController.swift in Sources */,
+				7F296ED1283A1D5A001833FD /* VODCollectionViewCell.swift in Sources */,
 				7F0501A228397FC800A4A2C8 /* MenuTableViewCell.swift in Sources */,
 				7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */,
 				7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */,
