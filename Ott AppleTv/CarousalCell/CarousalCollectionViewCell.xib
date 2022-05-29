@@ -16,27 +16,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="781" height="419"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z0x-lD-jkq">
-                        <rect key="frame" x="0.0" y="0.0" width="781" height="419"/>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="z0x-lD-jkq">
+                        <rect key="frame" x="0.0" y="85" width="781" height="334"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRt-Sa-9Tt">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRt-Sa-9Tt">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zY2-nw-epF">
+                        <rect key="frame" x="15" y="30" width="746" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Aek-9d-sXL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="z0x-lD-jkq" secondAttribute="trailing" id="76Q-zH-PSS"/>
-                <constraint firstItem="z0x-lD-jkq" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="D0Z-Cx-qhZ"/>
+                <constraint firstItem="z0x-lD-jkq" firstAttribute="top" secondItem="zY2-nw-epF" secondAttribute="bottom" constant="20" id="IH4-Kl-TnT"/>
                 <constraint firstAttribute="bottom" secondItem="z0x-lD-jkq" secondAttribute="bottom" id="O9y-ko-fAk"/>
+                <constraint firstItem="zY2-nw-epF" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="15" id="aYN-H2-5aZ"/>
+                <constraint firstItem="zY2-nw-epF" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" constant="30" id="cJy-bi-ATi"/>
                 <constraint firstItem="z0x-lD-jkq" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="kdC-oH-sY6"/>
+                <constraint firstAttribute="trailing" secondItem="zY2-nw-epF" secondAttribute="trailing" constant="20" id="uQU-s3-jEh"/>
             </constraints>
             <size key="customSize" width="781" height="419"/>
             <connections>
+                <outlet property="carousalTitle" destination="zY2-nw-epF" id="ELv-x0-f2U"/>
                 <outlet property="collectionView" destination="z0x-lD-jkq" id="jRh-pB-eIP"/>
             </connections>
             <point key="canvasLocation" x="297.5" y="-0.5"/>

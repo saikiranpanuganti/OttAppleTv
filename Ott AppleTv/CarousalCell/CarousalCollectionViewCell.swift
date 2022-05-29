@@ -9,8 +9,13 @@ import UIKit
 
 class CarousalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var carousalTitle: UILabel!
     
     var playlist: Playlist?
+    
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [collectionView]
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,14 +24,37 @@ class CarousalCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpUI() {
+        self.backgroundColor = UIColor(named: "backGroundColor")
+        collectionView.backgroundColor = UIColor(named: "backGroundColor")
         collectionView.register(UINib(nibName: "VODCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VODCollectionViewCell")
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        collectionView.remembersLastFocusedIndexPath = true
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        collectionView.reloadData()
+    }
+    
     func configureUI(playlist: Playlist?) {
         self.playlist = playlist
+        carousalTitle.text = playlist?.title
         collectionView.reloadData()
+    }
+    
+    override var canBecomeFocused: Bool {
+        return false
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldUpdateFocusIn context: UICollectionViewFocusUpdateContext) -> Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 
@@ -52,12 +80,12 @@ extension CarousalCollectionViewCell: UICollectionViewDelegate {
 }
 extension CarousalCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.height*0.65, height: collectionView.frame.height-20)
+        return CGSize(width: VodCellWidth, height: VodCellHeight)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 0
     }
 }

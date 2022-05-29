@@ -14,4 +14,21 @@ class VODCollectionViewCell: UICollectionViewCell {
     func configureUI(banner: Banner?) {
         vodImage.sd_setImage(with: URL(string: banner?.imagery?.thumbnailV ?? ""))
     }
+    
+    func configureUI(image: String) {
+        vodImage.image = UIImage(named: image)
+    }
+    
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        if let cell = context.nextFocusedView as? VODCollectionViewCell {
+            cell.transform = CGAffineTransform(scaleX: 1.12, y: 1.12)
+            cell.layer.borderColor = UIColor.orange.cgColor
+            cell.layer.borderWidth = 3.0
+        }
+        
+        if let cell = context.previouslyFocusedView as? VODCollectionViewCell {
+            cell.transform = .identity
+            cell.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
 }

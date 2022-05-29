@@ -11,6 +11,8 @@ import UIKit
 enum Controllers {
     case splash
     case root
+    case testHome
+    case testing
     
     func getController() -> UIViewController {
         switch self {
@@ -18,6 +20,10 @@ enum Controllers {
             return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashViewController")
         case .root:
             return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootViewController")
+        case .testHome:
+            return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestHomeViewController")
+        case .testing:
+            return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TestingViewController")
         }
     }
 }

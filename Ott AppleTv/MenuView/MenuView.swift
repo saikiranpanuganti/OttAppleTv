@@ -57,7 +57,6 @@ class MenuView: UIView {
         tableView.dataSource = self
     }
     
-    
 }
 
 extension MenuView: UITableViewDataSource {

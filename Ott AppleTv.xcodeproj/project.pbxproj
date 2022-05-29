@@ -53,7 +53,7 @@
 		7F05019E28397D3F00A4A2C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F0501A028397FC800A4A2C8 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		7F0501A128397FC800A4A2C8 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		7F296ECB283A080E001833FD /* CarousalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F296ECB283A080E001833FD /* CarousalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarousalCollectionViewCell.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		7F296ECC283A080E001833FD /* CarousalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarousalCollectionViewCell.xib; sourceTree = "<group>"; };
 		7F296ECF283A1D5A001833FD /* VODCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F296ED0283A1D5A001833FD /* VODCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VODCollectionViewCell.xib; sourceTree = "<group>"; };

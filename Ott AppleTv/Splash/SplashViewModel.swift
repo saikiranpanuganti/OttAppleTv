@@ -21,7 +21,6 @@ class SplashViewModel {
                 do {
                     let menu = try JSONDecoder().decode(MenuModel.self, from: data)
                     AppData.shared.menuData = menu.body?.data
-                    print(AppData.shared.menuData?.count)
                     for menu in AppData.shared.menuData ?? [] {
                         if menu.type == .home {
                             self.getHome(menu: menu)
@@ -43,7 +42,6 @@ class SplashViewModel {
                 do {
                     let home = try JSONDecoder().decode(HomeModel.self, from: data)
                     AppData.shared.homeData = home.body?.data
-                    print(AppData.shared.homeData?.title)
                     self.delegate?.goToHome()
                 }catch {
                     let jsonError = try? JSONSerialization.jsonObject(with: data)

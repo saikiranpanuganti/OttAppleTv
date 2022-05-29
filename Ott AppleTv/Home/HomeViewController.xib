@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-wG-NeW">
-                    <rect key="frame" x="20" y="0.0" width="1900" height="1080"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-wG-NeW">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IWu-iO-2Ve">
                         <size key="itemSize" width="128" height="128"/>
@@ -33,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="nkI-NY-t1X"/>
             <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
-                <constraint firstItem="LD2-wG-NeW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="8KE-9Q-5K4"/>
+                <constraint firstItem="LD2-wG-NeW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8KE-9Q-5K4"/>
                 <constraint firstItem="LD2-wG-NeW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LAB-bD-6ME"/>
                 <constraint firstAttribute="bottom" secondItem="LD2-wG-NeW" secondAttribute="bottom" id="LYG-Kb-yPd"/>
                 <constraint firstAttribute="trailing" secondItem="LD2-wG-NeW" secondAttribute="trailing" id="l2O-m7-U2D"/>

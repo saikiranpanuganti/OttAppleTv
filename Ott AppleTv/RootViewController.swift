@@ -17,6 +17,7 @@ class RootViewController: UIViewController {
     @IBOutlet weak var homeView: UIView!
     @IBOutlet weak var menuViewWidth: NSLayoutConstraint!
     @IBOutlet weak var homeLeading: NSLayoutConstraint!
+    @IBOutlet weak var homeWidth: NSLayoutConstraint!
     
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [homeView]
@@ -31,6 +32,7 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         self.menuViewWidth.constant = SideMenuWidthMin
         homeLeading.constant = 0
+        homeWidth.constant = ScreenWidth - SideMenuWidthMin
         addChildVc()
     }
     
@@ -41,6 +43,7 @@ class RootViewController: UIViewController {
     func addHomeController() {
         let homeController: HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let child = UINavigationController(rootViewController: homeController)
+        child.isNavigationBarHidden = true
         navController = child
         child.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChild(child)
@@ -72,6 +75,19 @@ class RootViewController: UIViewController {
         } completion: { collapsed in
             self.menuState = .collapsed
         }
+    }
+    
+    override func shouldUpdateFocus(in context: UIFocusUpdateContext) -> Bool {
+        if let _ = context.nextFocusedView as? MenuTableViewCell {
+            expandSideMenu()
+        }else {
+            collapseSideMenu()
+        }
+        return true
+    }
+    
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        
     }
 }
 
