@@ -11,6 +11,7 @@ import UIKit
 enum Controllers {
     case splash
     case root
+    case home
     case details
     case discoverMore
     
@@ -20,6 +21,8 @@ enum Controllers {
             return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashViewController")
         case .root:
             return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootViewController")
+        case .home:
+            return HomeViewController(nibName: "HomeViewController", bundle: nil)
         case .details:
             return DetailsViewController(nibName: "DetailsViewController", bundle: nil)
         case .discoverMore:

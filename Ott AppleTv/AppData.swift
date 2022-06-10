@@ -12,4 +12,6 @@ class AppData {
     
     var menuData: [Menu]?
     var homeData: Home?
+    var moviesData: Home?
+    var tvShowsData: Home?
 }

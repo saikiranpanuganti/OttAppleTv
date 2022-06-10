@@ -24,6 +24,7 @@ struct Menu: Codable {
     let id: Int?
     let title: String?
     let type: MenuType?
+    let subType: MenuSubType?
     let imagery: String?
     let url: String?
     let active, guestModeActive: Bool?
@@ -40,4 +41,9 @@ enum MenuType: String, Codable {
     case rewind = "Rewind"
     case discover = "Discover"
     case settings = "Settings"
+}
+
+enum MenuSubType: String, Codable {
+    case tvshows = "tvshows"
+    case movies = "movies"
 }

@@ -14,6 +14,7 @@ protocol HomeViewControllerDelegate: AnyObject {
 class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var viewModel: HomeViewModel = HomeViewModel()
     weak var delegate: HomeViewControllerDelegate?
 
     override func viewDidLoad() {
@@ -26,6 +27,9 @@ class HomeViewController: UIViewController {
         collectionView.allowsFocus = true
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        viewModel.delegate = self
+        viewModel.getData()
     }
     
     func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
@@ -41,11 +45,11 @@ extension HomeViewController: UICollectionViewDataSource {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppData.shared.homeData?.playlists?.count ?? 0
+        return viewModel.homeModel?.playlists?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarousalCollectionViewCell", for: indexPath) as? CarousalCollectionViewCell {
-            cell.configureUI(playlist: AppData.shared.homeData?.playlists?[indexPath.item])
+            cell.configureUI(playlist: viewModel.homeModel?.playlists?[indexPath.item])
             return cell
         }
         return UICollectionViewCell()
@@ -64,5 +68,14 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension HomeViewController: HomeViewModelDelegate {
+    func updateUI() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
+        }
     }
 }

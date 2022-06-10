@@ -31,8 +31,16 @@ class NavigationHandler {
         return nil
     }
     
-    func setRootVc(controller: UIViewController) {
-        
+    static func setRootVc() {
+        if let navigation = getRootNavigation() {
+            navigation.popToRootViewController(animated: true)
+        }
+    }
+    
+    static func setRootHome() {
+        if let navigation = getNavigation() {
+            navigation.popToRootViewController(animated: false)
+        }
     }
     
     static func pushFromRoot(controller: UIViewController?) {
@@ -43,7 +51,7 @@ class NavigationHandler {
     
     static func pushFromSelf(controller: UIViewController?) {
         if let navigation = getNavigation(), let controller = controller {
-            navigation.pushViewController(controller, animated: true)
+            navigation.pushViewController(controller, animated: false)
         }
     }
     

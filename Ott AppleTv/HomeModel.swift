@@ -21,7 +21,8 @@ struct HomeBody: Codable {
 // MARK: - Home
 struct Home: Codable {
     let id: Int?
-    let title, type: String?
+    let title: String?
+    let type: MenuType?
     let banner: [Banner]?
     let playlists: [Playlist]?
 }

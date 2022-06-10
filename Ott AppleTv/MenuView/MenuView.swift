@@ -11,6 +11,8 @@ class MenuView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    var selectedIndex: IndexPath = IndexPath(item: 1, section: 0)
+    
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [tableView]
     }
@@ -55,6 +57,42 @@ class MenuView: UIView {
         tableView.dataSource = self
     }
     
+    func updateMenuSelection(indexPath: IndexPath, count: Int) {
+        for index in 0..<count {
+            if index == indexPath.row {
+                AppData.shared.menuData?[index].isSelected = true
+            }else {
+                AppData.shared.menuData?[index].isSelected = false
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    func menuSelected(menu: Menu?) {
+        if let menu = menu {
+            if menu.type == .home {
+                setHomeAsRoot()
+            }else if menu.type == .vod {
+                navigateToVod(menu: menu)
+            }
+        }
+    }
+    
+    func setHomeAsRoot() {
+        NavigationHandler.setRootHome()
+    }
+    
+    func navigateToVod(menu: Menu) {
+        if let controller = Controllers.home.getController() as? HomeViewController {
+            controller.viewModel.menu = menu
+            if menu.subType == .movies {
+                controller.viewModel.homeModel = AppData.shared.moviesData
+            }else if menu.subType == .tvshows {
+                controller.viewModel.homeModel = AppData.shared.tvShowsData
+            }
+            NavigationHandler.pushFromSelf(controller: controller)
+        }
+    }
 }
 
 extension MenuView: UITableViewDataSource {
@@ -77,17 +115,13 @@ extension MenuView: UITableViewDataSource {
 
 extension MenuView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let menuCount = AppData.shared.menuData?.count, menuCount > 0 {
-            for index in 0..<menuCount {
-                if index == indexPath.row {
-                    AppData.shared.menuData?[index].isSelected = true
-                }else {
-                    AppData.shared.menuData?[index].isSelected = false
-                }
+        if selectedIndex != indexPath {
+            selectedIndex = indexPath
+            if let menuCount = AppData.shared.menuData?.count, menuCount > 0 {
+                menuSelected(menu: AppData.shared.menuData?[indexPath.row])
+                updateMenuSelection(indexPath: indexPath, count: menuCount)
             }
         }
-        
-        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

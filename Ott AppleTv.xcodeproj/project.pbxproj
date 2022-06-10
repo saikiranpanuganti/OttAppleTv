@@ -35,6 +35,7 @@
 		7F95A76C2836BC3800A6036D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F95A76B2836BC3800A6036D /* RootViewController.swift */; };
 		7F9EF20F2850E6D6008F0171 /* DiscoverMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9EF20D2850E6D6008F0171 /* DiscoverMoreViewController.swift */; };
 		7F9EF2102850E6D6008F0171 /* DiscoverMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9EF20E2850E6D6008F0171 /* DiscoverMoreViewController.xib */; };
+		7F9EF21228535B4C008F0171 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9EF21128535B4C008F0171 /* HomeViewModel.swift */; };
 		7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */; };
 		7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */; };
 		7FAC27E8284391B300F5E055 /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC27E7284391B300F5E055 /* NavigationHandler.swift */; };
@@ -74,6 +75,7 @@
 		7F95A76B2836BC3800A6036D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7F9EF20D2850E6D6008F0171 /* DiscoverMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreViewController.swift; sourceTree = "<group>"; };
 		7F9EF20E2850E6D6008F0171 /* DiscoverMoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverMoreViewController.xib; sourceTree = "<group>"; };
+		7F9EF21128535B4C008F0171 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7FAC27E7284391B300F5E055 /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				7FA7ABBF2806BB3B009DC344 /* HomeViewController.swift */,
 				7FA7ABC02806BB3B009DC344 /* HomeViewController.xib */,
+				7F9EF21128535B4C008F0171 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				7F296ED1283A1D5A001833FD /* VODCollectionViewCell.swift in Sources */,
 				7F0501A228397FC800A4A2C8 /* MenuTableViewCell.swift in Sources */,
 				7FA7ABC12806BB3B009DC344 /* HomeViewController.swift in Sources */,
+				7F9EF21228535B4C008F0171 /* HomeViewModel.swift in Sources */,
 				7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */,
 				7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */,
 				7F7C6EF5280837EA00FD29EC /* SplashView.swift in Sources */,

@@ -48,6 +48,7 @@ class RootViewController: UIViewController {
         child.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChild(child)
         homeController.delegate = self
+        homeController.viewModel.homeModel = AppData.shared.homeData
         child.view.frame = homeView.frame
         homeView.addSubview(child.view)
         
