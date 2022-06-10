@@ -27,6 +27,7 @@ struct Menu: Codable {
     let imagery: String?
     let url: String?
     let active, guestModeActive: Bool?
+    var isSelected: Bool? = false
 }
 
 enum MenuType: String, Codable {

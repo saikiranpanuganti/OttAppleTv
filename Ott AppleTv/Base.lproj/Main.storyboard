@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="8935" y="22"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation View Controller-->
         <scene sceneID="nYk-6L-Rob">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fjl-LF-yjb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="fjl-LF-yjb" customClass="MainNavigationViewController" customModule="Ott_AppleTv" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcl-PC-I4k">
                         <autoresizingMask key="autoresizingMask"/>

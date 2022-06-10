@@ -75,7 +75,11 @@ extension CarousalCollectionViewCell: UICollectionViewDataSource {
 }
 extension CarousalCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if indexPath.row%2 == 0 {
+            NavigationHandler.pushFromRoot(controller: Controllers.details.getController())
+        }else {
+            NavigationHandler.pushFromSelf(controller: Controllers.discoverMore.getController())
+        }
     }
 }
 extension CarousalCollectionViewCell: UICollectionViewDelegateFlowLayout {

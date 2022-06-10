@@ -21,8 +21,9 @@ class SplashViewModel {
                 do {
                     let menu = try JSONDecoder().decode(MenuModel.self, from: data)
                     AppData.shared.menuData = menu.body?.data
-                    for menu in AppData.shared.menuData ?? [] {
+                    for (index, menu) in (AppData.shared.menuData ?? []).enumerated() {
                         if menu.type == .home {
+                            AppData.shared.menuData?[index].isSelected = true
                             self.getHome(menu: menu)
                             break
                         }

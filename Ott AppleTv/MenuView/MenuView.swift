@@ -18,7 +18,6 @@ class MenuView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        print("MenuView init frame")
         xibSetUp()
         setUpUI()
     }
@@ -26,7 +25,6 @@ class MenuView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        print("MenuView init coder")
         xibSetUp()
         setUpUI()
     }
@@ -78,6 +76,20 @@ extension MenuView: UITableViewDataSource {
 }
 
 extension MenuView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let menuCount = AppData.shared.menuData?.count, menuCount > 0 {
+            for index in 0..<menuCount {
+                if index == indexPath.row {
+                    AppData.shared.menuData?[index].isSelected = true
+                }else {
+                    AppData.shared.menuData?[index].isSelected = false
+                }
+            }
+        }
+        
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }

@@ -26,6 +26,7 @@ extension SplashViewController: SplashViewModelDelegate {
             guard let self = self else { return }
             let rootController = Controllers.root.getController()
             self.navigationController?.viewControllers = [rootController]
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }
