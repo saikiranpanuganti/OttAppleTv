@@ -45,11 +45,13 @@ extension HomeViewController: UICollectionViewDataSource {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.homeModel?.playlists?.count ?? 0
+        return viewModel.homeModel?.playlists?.count ?? 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarousalCollectionViewCell", for: indexPath) as? CarousalCollectionViewCell {
-            cell.configureUI(playlist: viewModel.homeModel?.playlists?[indexPath.item])
+            if viewModel.homeModel != nil {
+                cell.configureUI(playlist: viewModel.homeModel?.playlists?[indexPath.item])
+            }
             return cell
         }
         return UICollectionViewCell()

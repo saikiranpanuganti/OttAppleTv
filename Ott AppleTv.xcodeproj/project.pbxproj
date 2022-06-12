@@ -30,7 +30,6 @@
 		7F7C6EED280832D400FD29EC /* NetworkAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EEC280832D400FD29EC /* NetworkAdaptor.swift */; };
 		7F7C6EF1280837CB00FD29EC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */; };
 		7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */; };
-		7F7C6EF5280837EA00FD29EC /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF4280837EA00FD29EC /* SplashView.swift */; };
 		7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C6EF72808384E00FD29EC /* BaseViewModel.swift */; };
 		7F95A76C2836BC3800A6036D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F95A76B2836BC3800A6036D /* RootViewController.swift */; };
 		7F9EF20F2850E6D6008F0171 /* DiscoverMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9EF20D2850E6D6008F0171 /* DiscoverMoreViewController.swift */; };
@@ -42,6 +41,8 @@
 		7FAC27EC2843938F00F5E055 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC27EB2843938F00F5E055 /* BaseViewController.swift */; };
 		7FAC27EF2843A7F000F5E055 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAC27ED2843A7F000F5E055 /* DetailsViewController.swift */; };
 		7FAC27F02843A7F000F5E055 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAC27EE2843A7F000F5E055 /* DetailsViewController.xib */; };
+		7FD94DAA2855DAFA0049FAD7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD94DA92855DAFA0049FAD7 /* UIImage+Extension.swift */; };
+		7FD94DAE28560B630049FAD7 /* netflixGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7FD94DAD28560B630049FAD7 /* netflixGif.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +71,6 @@
 		7F7C6EEC280832D400FD29EC /* NetworkAdaptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdaptor.swift; sourceTree = "<group>"; };
 		7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		7F7C6EF4280837EA00FD29EC /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7F7C6EF72808384E00FD29EC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		7F95A76B2836BC3800A6036D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7F9EF20D2850E6D6008F0171 /* DiscoverMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMoreViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +82,8 @@
 		7FAC27EB2843938F00F5E055 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7FAC27ED2843A7F000F5E055 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		7FAC27EE2843A7F000F5E055 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		7FD94DA92855DAFA0049FAD7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		7FD94DAD28560B630049FAD7 /* netflixGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = netflixGif.gif; sourceTree = "<group>"; };
 		DC3419D27F144DBDBD43A6E4 /* Pods-Ott AppleTv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ott AppleTv.debug.xcconfig"; path = "Target Support Files/Pods-Ott AppleTv/Pods-Ott AppleTv.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 				7F0501882839286B00A4A2C8 /* HomeModel.swift */,
 				7F05018A283933E100A4A2C8 /* Controllers.swift */,
 				7FAC27E7284391B300F5E055 /* NavigationHandler.swift */,
+				7FD94DA92855DAFA0049FAD7 /* UIImage+Extension.swift */,
 				7F9EF20C2850E6C0008F0171 /* DiscoverMore */,
 				7FAC27F12843A7F600F5E055 /* Details */,
 				7F7C6EEE2808378200FD29EC /* NetworkAdaptor */,
@@ -155,6 +158,7 @@
 				7F7C6EEF280837BD00FD29EC /* Splash */,
 				7FA7ABC72806BB4C009DC344 /* Home */,
 				7F026D7E2806017F00D549E8 /* Main.storyboard */,
+				7FD94DAD28560B630049FAD7 /* netflixGif.gif */,
 				7F026D842806018000D549E8 /* Assets.xcassets */,
 				7F026D862806018000D549E8 /* LaunchScreen.storyboard */,
 				7F026D812806017F00D549E8 /* Ott_AppleTv.xcdatamodeld */,
@@ -211,7 +215,6 @@
 			children = (
 				7F7C6EF0280837CB00FD29EC /* SplashViewController.swift */,
 				7F7C6EF2280837DB00FD29EC /* SplashViewModel.swift */,
-				7F7C6EF4280837EA00FD29EC /* SplashView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				7F0501A328397FC800A4A2C8 /* MenuTableViewCell.xib in Resources */,
 				7F296ECE283A080E001833FD /* CarousalCollectionViewCell.xib in Resources */,
 				7FA7ABC22806BB3B009DC344 /* HomeViewController.xib in Resources */,
+				7FD94DAE28560B630049FAD7 /* netflixGif.gif in Resources */,
 				7FAC27F02843A7F000F5E055 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +382,7 @@
 				7FAC27E8284391B300F5E055 /* NavigationHandler.swift in Sources */,
 				7F7C6EED280832D400FD29EC /* NetworkAdaptor.swift in Sources */,
 				7F05019F28397D3F00A4A2C8 /* Constants.swift in Sources */,
+				7FD94DAA2855DAFA0049FAD7 /* UIImage+Extension.swift in Sources */,
 				7FAC27EF2843A7F000F5E055 /* DetailsViewController.swift in Sources */,
 				7F05018B283933E100A4A2C8 /* Controllers.swift in Sources */,
 				7F7C6EF82808384E00FD29EC /* BaseViewModel.swift in Sources */,
@@ -397,7 +402,6 @@
 				7F9EF21228535B4C008F0171 /* HomeViewModel.swift in Sources */,
 				7F0501892839286B00A4A2C8 /* HomeModel.swift in Sources */,
 				7F7C6EF3280837DB00FD29EC /* SplashViewModel.swift in Sources */,
-				7F7C6EF5280837EA00FD29EC /* SplashView.swift in Sources */,
 				7F75A2D42838D808006290F2 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,6 +30,8 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        menuView.delegate = self
         self.menuViewWidth.constant = SideMenuWidthMin
         homeLeading.constant = 0
         homeWidth.constant = ScreenWidth - SideMenuWidthMin
@@ -87,8 +89,9 @@ class RootViewController: UIViewController {
         return true
     }
     
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        
+    private func updateFocusOfCurrentView() { //These update the focus of the current screen. from here it will go to the preferredFocusEnvironments and try to move focus to the given views
+        self.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
     }
 }
 
@@ -100,5 +103,16 @@ extension RootViewController: HomeViewControllerDelegate {
         case .expanded:
             collapseSideMenu()
         }
+    }
+}
+
+extension RootViewController: MenuViewDelegate {
+    func hideUnHideMenu(hide: Bool) {
+        if hide {
+            collapseSideMenu()
+        }else {
+            expandSideMenu()
+        }
+        updateFocusOfCurrentView()
     }
 }

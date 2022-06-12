@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class CarousalCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -27,10 +28,12 @@ class CarousalCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = UIColor(named: "backGroundColor")
         collectionView.backgroundColor = UIColor(named: "backGroundColor")
         collectionView.register(UINib(nibName: "VODCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VODCollectionViewCell")
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         collectionView.remembersLastFocusedIndexPath = true
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        carousalTitle.startSkeletonAnimation()
     }
     
     override func prepareForReuse() {
@@ -40,6 +43,8 @@ class CarousalCollectionViewCell: UICollectionViewCell {
     }
     
     func configureUI(playlist: Playlist?) {
+        carousalTitle.stopSkeletonAnimation()
+        
         self.playlist = playlist
         carousalTitle.text = playlist?.title
         collectionView.reloadData()
@@ -63,11 +68,13 @@ extension CarousalCollectionViewCell: UICollectionViewDataSource {
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return playlist?.content?.count ?? 0
+        return playlist?.content?.count ?? 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VODCollectionViewCell", for: indexPath) as? VODCollectionViewCell {
-            cell.configureUI(banner: playlist?.content?[indexPath.row])
+            if playlist != nil {
+                cell.configureUI(banner: playlist?.content?[indexPath.row])
+            }
             return cell
         }
         return UICollectionViewCell()

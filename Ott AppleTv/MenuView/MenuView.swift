@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol MenuViewDelegate: AnyObject {
+    func hideUnHideMenu(hide: Bool)
+}
+
 class MenuView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var selectedIndex: IndexPath = IndexPath(item: 1, section: 0)
+    weak var delegate: MenuViewDelegate?
     
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [tableView]
@@ -93,6 +98,10 @@ class MenuView: UIView {
             NavigationHandler.pushFromSelf(controller: controller)
         }
     }
+    
+    func hideMenu() {
+        delegate?.hideUnHideMenu(hide: true)
+    }
 }
 
 extension MenuView: UITableViewDataSource {
@@ -120,6 +129,7 @@ extension MenuView: UITableViewDelegate {
             if let menuCount = AppData.shared.menuData?.count, menuCount > 0 {
                 menuSelected(menu: AppData.shared.menuData?[indexPath.row])
                 updateMenuSelection(indexPath: indexPath, count: menuCount)
+                hideMenu()
             }
         }
     }

@@ -8,5 +8,6 @@ target 'Ott AppleTv' do
   # Pods for Ott AppleTv
 
 	pod 'SDWebImage', '~> 5.0'
+	pod 'SkeletonView', '~> 1.29.2'
 
 end

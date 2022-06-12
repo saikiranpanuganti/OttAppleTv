@@ -7,15 +7,27 @@
 
 import UIKit
 import SDWebImage
+import SkeletonView
 
 class VODCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var vodImage: UIImageView!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        vodImage.showAnimatedSkeleton()
+    }
+    
     func configureUI(banner: Banner?) {
+        vodImage.hideSkeleton()
+        
         vodImage.sd_setImage(with: URL(string: banner?.imagery?.thumbnailV ?? ""))
     }
     
     func configureUI(image: String) {
+        vodImage.hideSkeleton()
+        
         vodImage.image = UIImage(named: image)
     }
     
